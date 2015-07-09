@@ -1,0 +1,23 @@
+{
+  "name": "chs-shows",
+  "version": "0.0.1",
+  "description": "what's going on tonight in chs?",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DanHanf/chs-shows.git"
+  },
+  "author": "",
+  "license": "BSD",
+  "bugs": {
+    "url": "https://github.com/DanHanf/chs-shows/issues"
+  },
+  "dependencies": {
+    "express": "3.0.0rc4",
+    "jade": "*",
+    "lodash": "~2.4.1"
+  }
+}
