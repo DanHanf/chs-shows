@@ -7,7 +7,7 @@ module.exports = function(cb) {
     var $ = cheerio.load(body)
     var details = $('.show_nugget').html()
     var time = $('.show_nugget .shows_date_').html()
-    var time = time.split('@')[1]
+    var time = time.split('@')[0]
     console.log(time)
     //console.log(time)
     cb(time)
