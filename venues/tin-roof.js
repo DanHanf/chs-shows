@@ -1,15 +1,15 @@
 var request = require('request')
   , cheerio = require('cheerio')
-  , url = 'https://www.reverbnation.com/widget_code/html_widget/venue_1008205?widget_id=52&pwc[show_map]=0'
+  , url = 'https://www.reverbnation.com/venue/tinroofwashley'
 
-module.exports = function(req, res) {
-  request(url, function(err, response, data) {
-    var $ = cheerio.load(data)
-    var details = $('#container .listPanel .jspContainer .jspPane .calendar .detail')
-    console.log(details)
-    $('ol .detail').each(function(i, eventInfo) {
-      //console.log(i)
-      //console.log(eventInfo)
-    })
+module.exports = function(cb) {
+  request(url, function(err, response, body) {
+    var $ = cheerio.load(body)
+    var details = $('.show_nugget').html()
+    var time = $('.show_nugget .shows_date_').html()
+    var time = time.split('@')[1]
+    console.log(time)
+    //console.log(time)
+    cb(time)
   })
 }
